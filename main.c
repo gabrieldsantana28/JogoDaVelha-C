@@ -154,12 +154,10 @@ void ordenarRanking() {
     for (int i = 0; i < numJogadores - 1; i++) {
         for (int j = 0; j < numJogadores - i - 1; j++) {
             if (pontuacao[j] < pontuacao[j+1]) {
-                // Troca pontuações
                 tempPontuacao = pontuacao[j];
                 pontuacao[j] = pontuacao[j+1];
                 pontuacao[j+1] = tempPontuacao;
 
-                // Troca nomes
                 strcpy(tempNome, jogadores[j]);
                 strcpy(jogadores[j], jogadores[j+1]);
                 strcpy(jogadores[j+1], tempNome);
